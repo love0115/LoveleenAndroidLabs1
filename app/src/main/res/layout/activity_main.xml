@@ -1,62 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_message"
-        android:textSize="30sp">
-       </TextView>
-
-    <EditText
-        android:id="@+id/myedittext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/editmessage"
-        android:hint="@string/hinttext" />
-
+    tools:context=".ui.MainActivity">
 
     <Button
-        android:id="@+id/my_button"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="@string/button_message" />
-    <CheckBox
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Do you drink coffee?"
-        android:id="@+id/mycheckbox"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="647dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Switch
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/mySwitch"
-        android:text="Dou you drink coffee?"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-
-      <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you drink cofee?"
-        android:id="@+id/myRadiobutton"/>
-
-      <ImageView
-        android:id="@+id/myImageView"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/c" />
-       <ImageButton
-        android:id="@+id/myimagebutton"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/c" />
-        </LinearLayout>

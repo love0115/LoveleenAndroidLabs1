@@ -1,13 +1,20 @@
-package algonquin.cst2335.love0115;
+package algonquin.cst2335.love0115.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.Switch;
+import android.widget.Toast;
 import android.widget.TextView;
 
+import algonquin.cst2335.data.MainViewmodel;
+import algonquin.cst2335.love0115.R;
 import algonquin.cst2335.love0115.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView theText=variableBinding.textview;
-        Button myButton= variableBinding.buttonId;
+        Button myButton= variableBinding.myButton;
         ImageButton myImageButton = variableBinding.myimagebutton;
 
 
@@ -36,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        variableBinding.buttonId.setOnClickListener(click -> {
+        variableBinding.myButton.setOnClickListener(click -> {
             model.editString.postValue(variableBinding.myedittext.getText().toString());
             // model.editString = variableBinding.myedittext.getText().toString();
             // variableBinding.textview.setText("Your edit has:" + model.editString);
         });
 
-//show a toast message
+             //show a toast message
 
         //calling setOnCheckedChangeListener method on each button
         CheckBox mycheckbox=variableBinding.mycheckbox;
@@ -85,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //ser image fresource for image view
-        myImageView.setImageResource(R.drawable.c);
+        myImageView.setImageResource(R.drawable.algonquin);
         model.editString.observe(this,s -> {
             variableBinding.textview.setText("Your edit text has"+s);
 
@@ -94,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ///variableBinding.textview.setText(model.editString);
-        variableBinding.buttonId.setOnClickListener(click -> {
+        variableBinding.myButton.setOnClickListener(click -> {
             model.editString.postValue(variableBinding.myedittext.getText().toString());
             // model.editString = variableBinding.myedittext.getText().toString();
             // variableBinding.textview.setText("Your edit has:" + model.editString);
